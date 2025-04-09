@@ -16,9 +16,9 @@ const Select = ({
   const [value, setValue] = useState();
   const [collapsed, setCollapsed] = useState(true);
   const changeValue = (newValue) => {
-    onChange();
+    onChange(newValue); // Passe la nouvelle valeur sélectionnée
     setValue(newValue);
-    setCollapsed(newValue);
+    setCollapsed(true); // Ferme le menu après la sélection
   };
   return (
     <div className={`SelectContainer ${type}`} data-testid="select-testid">
